@@ -58,6 +58,9 @@ public class UserProfileServlet extends HttpServlet {
 	        md.update((userName + password + email + "JASMINE").getBytes());
 	        byte byteData[] = md.digest();
 	        password = this.encryptedData(byteData);
+	        
+	        System.out.println("password=" + password);
+	        
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
